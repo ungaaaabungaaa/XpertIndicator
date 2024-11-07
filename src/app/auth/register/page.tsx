@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Nav_Bar from '@/app/components/navbar';
 import Image from 'next/image';
 import {Input} from "@nextui-org/input";
-import Dashboard from '../../../../public/RegisterDashboard.png';
+import Dashboard from '../../../../public/registerdashboard.png';
 import GoogleIcon  from "../icons/GoogleIcon";
 import {EyeFilledIcon} from "../icons/EyeFilledIcon";
 import {EyeSlashFilledIcon} from "../icons/EyeSlashFilledIcon";
