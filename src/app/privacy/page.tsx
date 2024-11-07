@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
           Our website may contain links to third-party websites that are not operated or controlled by XpertIndicator. We are not responsible for the privacy practices or the content of those third-party websites.
         </p>
         <br></br>
-        <h2 className='text-white text-2xl'>8. Children's Privacy</h2>
+        <h2 className='text-white text-2xl'>8. Children&apos;s Privacy</h2>
         <p className='text-white'>
           Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have inadvertently collected personal information from a child under the age of 13, we will take steps to delete that information.
         </p>

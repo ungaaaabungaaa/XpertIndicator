@@ -28,7 +28,7 @@ export default function Terms() {
           <br></br>
           <h2  className='text-white text-2xl'>2. Purchase and Delivery</h2>
           <ul  className='text-white'>
-            <li><strong>Product:</strong> Upon purchasing a trading indicator from our website, you will receive the indicator's installation link for <strong>TradingView</strong>, along with a free downloadable book and access to exclusive YouTube videos that explain how to use the indicator and optimize profits.</li>
+            <li><strong>Product:</strong> Upon purchasing a trading indicator from our website, you will receive the indicator&apos;s installation link for <strong>TradingView</strong>, along with a free downloadable book and access to exclusive YouTube videos that explain how to use the indicator and optimize profits.</li>
             <li><strong>Delivery:</strong> After your purchase is confirmed, the product will be delivered to the email address associated with your account. You will receive an email with the link to access the indicator and additional resources within 24 hours.</li>
           </ul>
           <br></br>
