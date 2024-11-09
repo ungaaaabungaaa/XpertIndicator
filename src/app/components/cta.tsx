@@ -1,3 +1,4 @@
+'use client'
 import { Chip } from "@nextui-org/chip";
 import {Button} from "@nextui-org/button";
 import { useRouter } from 'next/navigation'
