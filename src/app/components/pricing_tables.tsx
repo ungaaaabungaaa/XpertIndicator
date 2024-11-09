@@ -1,10 +1,14 @@
+'use client'
 import { Check } from "lucide-react";
 import { Button } from "@nextui-org/button";
 import { Card ,CardBody } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
+import { useRouter } from 'next/navigation'
+
 
 
 export default function Pricing_Tables() {
+  const router = useRouter();
   return (
     <>
     <div className=" text-white p-4 md:p-8 bg-pricing-layout">
@@ -89,7 +93,7 @@ export default function Pricing_Tables() {
                   </p>
                 </div>
 
-                <Button className="w-full bg-signup-button">
+                <Button onClick={() => router.push('/checkout')} className="w-full bg-signup-button">
                   Buy Now
                 </Button>
 
