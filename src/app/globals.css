@@ -98,7 +98,7 @@ html,body
 {
   background-repeat: no-repeat;
   background-size: 50%;
-  background-image: url(../../public/register_background.png);
+  background-image: url(../../public/register_background.webp);
 }
 
 .bg-register-google-button
@@ -114,7 +114,7 @@ html,body
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  background-image: url(../../public/hero_backdrop.png);
+  background-image: url(../../public/hero_backdrop.webp);
 }
 
 @layer base {
@@ -203,7 +203,7 @@ html,body
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../../public/herov1.png);
+  background-image: url(../../public/herov1.webp);
 }
 
 
@@ -216,7 +216,7 @@ html,body
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center center;
-  background-image: url(../../public/CTA-Mobile.png);
+  background-image: url(../../public/CTA-Mobile.webp);
 }
 
 
@@ -226,7 +226,7 @@ html,body
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../../public/CTA.png);
+  background-image: url(../../public/CTA.webp);
 }
 
 .cta-button
@@ -246,7 +246,7 @@ html,body
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../../public/homehero.png);
+  background-image: url(../../public/homehero.webp);
 }
 
 .bg-magic-card
@@ -264,7 +264,7 @@ html,body
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../../public/pricingbackdrop.png);
+  background-image: url(../../public/pricingbackdrop.webp);
 }
 
 

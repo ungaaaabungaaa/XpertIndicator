@@ -5,9 +5,9 @@ import Footer from './components/footer'
 import HeroVideoDialog from '@/components/ui/hero-video-dialog'
 import { Chip } from '@nextui-org/chip'
 import Image from 'next/image';
-import feature1 from '../../public/feature1.png';
-import feature2 from '../../public/feature2.png';
-import feature3 from '../../public/feature3.png';
+import feature1 from '../../public/feature1.webp';
+import feature2 from '../../public/feature2.webp';
+import feature3 from '../../public/feature3.webp';
 import Best_Tools from './components/best_tools';
 import Pricing_Tables from './components/pricing_tables'
 

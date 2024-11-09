@@ -3,19 +3,80 @@ import Head from 'next/head';
 import Nav_Bar from '@/app/components/navbar';
 import Image from 'next/image';
 import {Input} from "@nextui-org/input";
-import Dashboard from '../../../../public/registerdashboard.png';
+import Dashboard from '../../../../public/registerdashboard.webp';
 import GoogleIcon  from "../icons/GoogleIcon";
 import {EyeFilledIcon} from "../icons/EyeFilledIcon";
 import {EyeSlashFilledIcon} from "../icons/EyeSlashFilledIcon";
 import React from 'react';
+import { useState, ChangeEvent } from 'react';
 
 import {Button} from "@nextui-org/button";
 import Footer from '@/app/components/footer';
+import { useRouter } from 'next/navigation'
+import { auth } from '../../config/firebaseConfig';
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+
+import toast from 'react-hot-toast';
+
+interface FormData {
+  fullName: string;
+  email: string;
+  phone: string;
+  password: string;
+}
+
+interface Errors {
+  fullName?: string;
+  email?: string;
+  password?: string;
+  auth?: string;
+}
+
+
+function Toast(message:string) {
+  toast.success(message); // Displays a success message
+};
 
 export default function Register() {
   
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
+  const router = useRouter();
+
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+
+   // Handle input changes
+   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (name === 'fullName') setFullName(value);
+    if (name === 'email') setEmail(value);
+    if (name === 'phone') setPhone(value);
+    if (name === 'password') setPassword(value);
+  };
+
+
+  // Register the user
+  const handleRegister = async () => {
+    if (!fullName || !email || !password) {
+      console.log('Please fill in all required fields: Full Name, Email, and Password');
+      Toast(`Please fill in all required fields: Full Name, Email, and Password`);
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log('User registered:', userCredential.user);
+      Toast(`User registered Welcome 🎉`);
+      router.push('/');
+    } catch (error: any) {
+      console.error('Error registering user:', error.message);
+      Toast(`Error registering user: ${ error.message}`);
+    }
+  };
+
   
   return (
     <>
@@ -44,13 +105,13 @@ export default function Register() {
             <p className='text-grey'>Let’s create new account</p>
             <br></br>
 
-            <Input isClearable isRequired  className='w-full' type="text" label="Full Name" />
+            <Input isClearable isRequired  className='w-full'  type="text" label="Full Name"  value={fullName} name="fullName" onChange={handleChange} />
             <br></br>
-            <Input isClearable isRequired  className='w-full' type="email" label="Email" />
+            <Input isClearable isRequired  className='w-full' type="email" label="Email" value={email}  name="email" onChange={handleChange} />
             <br></br>
-            <Input isClearable  className='w-full' type="tel" label="Phone Number" />
+            <Input isClearable  className='w-full' type="tel" label="Phone Number" value={phone} name="phone"  onChange={handleChange} />
             <br></br>
-            <Input isRequired  className='w-full'  label="Password"
+            <Input isRequired  className='w-full'  label="Password"  value={password} name="password" onChange={handleChange}
             endContent={
               <button className="focus:outline-none" type="button" onClick={toggleVisibility} aria-label="toggle password visibility">
                 {isVisible ? (
@@ -63,21 +124,11 @@ export default function Register() {
             type={isVisible ? "text" : "Password"}
             />
             <br></br>
-            <Button size="lg" radius="md" variant="faded" className='w-full bg-signup-button pt-2 pb-2'>Register</Button>
+            <Button size="lg" onClick={handleRegister} radius="md" variant="faded" className='w-full bg-signup-button pt-2 pb-2'>Register</Button>
             <br></br>
-            <div className="flex items-center w-full">
-              <div className="flex-grow border-t border-gray-500"></div>
-              <span className="mx-4 text-gray-500">or</span>
-              <div className="flex-grow border-t border-gray-500"></div>
-            </div>
-            <br></br>
-            <Button  variant="solid" size="lg" className='w-full bg-register-google-button'  startContent={<GoogleIcon/>}>
-              Register with Google 
-            </Button>
-            
-            <br></br>
+  
             <div className='w-full text-center'>
-              <p className='text-white'>Already have an account?  <span className='text-light-blue-x cursor-pointer hover:text-white'>Login Here</span> </p>
+              <p className='text-white'>Already have an account?  <span onClick={() => router.push('/auth/login')} className='text-light-blue-x cursor-pointer hover:text-white'>Login Here</span> </p>
             </div>
           </div>
         </div>

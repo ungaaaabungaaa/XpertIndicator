@@ -3,11 +3,11 @@ import Nav_Bar from '../components/navbar';
 import Footer from '../components/footer';
 import { Chip } from '@nextui-org/chip';
 import Image from 'next/image';
-import feature1 from '../../../public/feature1.png'
-import feature2 from '../../../public/feature2.png'
-import feature3 from '../../../public/feature3.png'
-import feature4 from '../../../public/feature4.png'
-import feature5 from '../../../public/feature6.png'
+import feature1 from '../../../public/feature1.webp'
+import feature2 from '../../../public/feature2.webp'
+import feature3 from '../../../public/feature3.webp'
+import feature4 from '../../../public/feature4.webp'
+import feature5 from '../../../public/feature6.webp'
 
 export default function Features() {
   return (

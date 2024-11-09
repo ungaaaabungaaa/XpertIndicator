@@ -3,17 +3,67 @@
 import Head from 'next/head';
 import Nav_Bar from '@/app/components/navbar';
 import Image from 'next/image';
-import Dashboard from '../../../../public/login-dashboard.png';
+import Dashboard from '../../../../public/login-dashboard.webp';
 import {Input} from "@nextui-org/input";
 import {EyeFilledIcon} from "../icons/EyeFilledIcon";
 import {EyeSlashFilledIcon} from "../icons/EyeSlashFilledIcon";
-import React from 'react';
+import React, { use } from 'react';
 import {Button} from "@nextui-org/button";
 import GoogleIcon  from "../icons/GoogleIcon";
 import Footer from '@/app/components/footer';
+import { useRouter } from 'next/navigation'
+
+import { auth } from '../../config/firebaseConfig';
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import toast from 'react-hot-toast';
+
+
+function Toast(message:string) {
+  toast.success(message); // Displays a success message
+};
+
+
 
 
 export default function Login() {
+
+
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const router = useRouter();
+
+  function handleLogin(email: string, password: string) {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("Logged in as:", user.email);
+        Toast(`Logged in as: ${user.email}`);
+        router.push('/');
+      })
+      .catch((error) => {
+        console.error("Login failed:", error.message);
+        Toast(`Logged in as: ${error.message}`);
+      });
+  }
+
+  function handleGoogleLogin() {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log("Logged in with Google as:", user.email);
+        Toast(`Logged in with Google as: ${user.email}`);
+        router.push('/');
+      })
+      .catch((error) => {
+        console.error("Google login failed:", error.message);
+        Toast(`Google login failed: ${error.message}`);
+      });
+  }
+
+ 
+
+
   
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -25,8 +75,6 @@ export default function Login() {
       </Head>
       <Nav_Bar></Nav_Bar>
     
-
-
       <div className='flex items-center justify-center flex-col lg:flex-row w-full'>
         <div className='w-full h-full lg:w-1/2 lg:h-full pt-5 pb-5'>
         <div>
@@ -35,7 +83,7 @@ export default function Login() {
             <h1 className='text-white text-2xl font-semibold'>Login </h1>
             <p className='text-grey'>Let’s login into your account first</p>
             <br></br>
-            <Input isClearable isRequired  className='w-full' type="email" label="Email" />
+            <Input isClearable isRequired  className='w-full' type="email" label="Email" onChange={(e) => setEmail(e.target.value)} />
             <br></br>
             <Input isRequired  className='w-full'  label="Password"
             endContent={
@@ -48,9 +96,10 @@ export default function Login() {
               </button>
             }
             type={isVisible ? "text" : "password"}
+            onChange={(e) => setPassword(e.target.value)}
             />
             <br></br>
-            <Button size="lg" radius="md" variant="faded" className='w-full bg-signup-button pt-2 pb-2'>Login</Button>
+            <Button onClick={() => handleLogin(email, password)} size="lg" radius="md" variant="faded"  className='w-full bg-signup-button pt-2 pb-2'>Login</Button>
             <p className='text-light-blue-x mt-2 mb-2 hover:text-white'>Forgot Password ?</p>
             <div className="flex items-center w-full">
               <div className="flex-grow border-t border-gray-500"></div>
@@ -58,12 +107,10 @@ export default function Login() {
               <div className="flex-grow border-t border-gray-500"></div>
             </div>
             <br></br>
-            <Button  variant="solid" size="lg" className='w-full bg-register-google-button'  startContent={<GoogleIcon/>}>
-              Login with Google 
-            </Button>
+            <Button  variant="solid" size="lg" className='w-full bg-register-google-button'  startContent={<GoogleIcon/>} onClick={handleGoogleLogin}>Login with Google </Button>
             <br></br>
             <div className='w-full text-center'>
-              <p className='text-white'>Don’t have an account? <span className='text-light-blue-x cursor-pointer hover:text-white'>Register</span> </p>
+              <p className='text-white'>Don’t have an account? <span onClick={() => router.push('/auth/register')}  className='text-light-blue-x cursor-pointer hover:text-white'>Register</span> </p>
             </div>
           </div>
         </div>
