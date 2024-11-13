@@ -11,6 +11,7 @@ import feature3 from '../../public/feature3.webp';
 import Best_Tools from './components/best_tools';
 import Pricing_Tables from './components/pricing_tables'
 import { Test_Demo } from './components/test_demo'
+import { HeroScrollDemo } from './components/HeroScrollDemo'
 
 export default function Home() {
   return (
@@ -110,12 +111,11 @@ export default function Home() {
 
     <br></br>
     <Best_Tools></Best_Tools>
+   
     <br></br>
     <Pricing_Tables></Pricing_Tables>
     <br></br>
     
-
-
 
     <div className="w-full p-6 flex justify-center items-center flex-col">
       <br></br>
@@ -128,10 +128,10 @@ export default function Home() {
       <Test_Demo></Test_Demo>
       
     </div>
-    
-
+   
      <CTA></CTA>
      <FAQ></FAQ>
+     <HeroScrollDemo></HeroScrollDemo>
      <br></br>
      <br></br>
      <Footer></Footer>
