@@ -9,9 +9,10 @@ import feature1 from '../../public/feature1.webp';
 import feature2 from '../../public/feature2.webp';
 import feature3 from '../../public/feature3.webp';
 import Best_Tools from './components/best_tools';
-import Pricing_Tables from './components/pricing_tables'
-import { Test_Demo } from './components/test_demo'
-import { HeroScrollDemo } from './components/HeroScrollDemo'
+import Pricing_Tables from './components/pricing_tables';
+import { Test_Demo } from './components/test_demo';
+import { HeroScrollDemo } from './components/HeroScrollDemo';
+
 
 export default function Home() {
   return (
@@ -111,6 +112,7 @@ export default function Home() {
 
     <br></br>
     <Best_Tools></Best_Tools>
+   
    
     <br></br>
     <Pricing_Tables></Pricing_Tables>
