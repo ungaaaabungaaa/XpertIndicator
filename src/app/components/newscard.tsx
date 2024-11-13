@@ -39,11 +39,12 @@ export default function NewsCard({
   return (
     <Card
       onClick={handleClick}
-      className="py-4"
+      className="py-4 "
       style={{
         width: '300px', // Fixed width
         height: 'auto', // Allow height to be flexible based on content
         display: 'flex',
+        background: '#000',
         flexDirection: 'column', // Stack content vertically
         justifyContent: 'space-between', // Distribute space evenly
       }}

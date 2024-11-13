@@ -10,6 +10,7 @@ import feature2 from '../../public/feature2.webp';
 import feature3 from '../../public/feature3.webp';
 import Best_Tools from './components/best_tools';
 import Pricing_Tables from './components/pricing_tables'
+import { Test_Demo } from './components/test_demo'
 
 export default function Home() {
   return (
@@ -112,6 +113,22 @@ export default function Home() {
     <br></br>
     <Pricing_Tables></Pricing_Tables>
     <br></br>
+    
+
+
+
+    <div className="w-full p-6 flex justify-center items-center flex-col">
+      <br></br>
+      <Chip>Testimonails</Chip>
+      <br></br>
+      <h1 className='text-white text-2xl md:text-5xl font-semibold'>Our  Reivews</h1>
+      <br></br>
+      <p className='text-white'>Checkout Our Reviews On Google Too & Some Here As Well</p>
+      <br></br>
+      <Test_Demo></Test_Demo>
+      
+    </div>
+    
 
      <CTA></CTA>
      <FAQ></FAQ>
