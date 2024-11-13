@@ -20,20 +20,13 @@ export default function CheckOut() {
       </Head>
       <Nav_Bar />
       <div className="w-100 p-6 flex items-center justify-center flex-col">
-        <Chip>Checkout 1 Step</Chip>
-        <br></br>
-        <h1 className="text-white text-2xl font-semibold text-center">
-          Checkout
-        </h1>
-        <p className="text-white text-center">
-          Complete your purchase and unlock the power of XpertIndicator.
-        </p>
+       
 
         <div className="w-full flex flex-col md:flex-row-reverse  p-2 md:p-6">
           
         <div className="w-full md:w-50 p-2 md:p-6">
             <h1 className='text-white text-2xl font-semibold'>Checkout Form </h1>
-            <p className='text-grey'>Let’s login into your account first</p>
+            <p className='text-grey'> Complete your purchase and unlock the power of XpertIndicator.</p>
             <br></br>
             <Input isClearable isRequired  className='w-full' type="text" label="Full Name" />
             <br></br>
