@@ -34,7 +34,7 @@ export default function NewsCard({
   if (!isClient) return null;
 
   // Slice the headline to 40 characters (including spaces)
-  const truncatedHeadline = headline.slice(0, 40);
+  const truncatedHeadline = headline.slice(0, 30);
 
   return (
     <Card
@@ -51,13 +51,14 @@ export default function NewsCard({
     >
       <CardHeader className="w-full pb-0 pt-2 flex-col items-start">
         <p
-          className="text-tiny uppercase font-bold text-ellipsis"
+          className="text-tiny text-white uppercase font-bold text-ellipsis"
           style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
         >
           {truncatedHeadline}
         </p>
         <small className="text-default-500">{source}</small>
-        <h4 className="font-bold text-large">{category}</h4>
+        <h4 className="font-bold text-white text-large">{category}</h4>
+        <br></br>
       </CardHeader>
       <CardBody className="overflow-hidden py-0">
         <Image
