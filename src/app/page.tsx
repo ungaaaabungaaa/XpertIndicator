@@ -31,7 +31,7 @@ export default function Home() {
       <HeroVideoDialog 
         className="w-full lg:w-3/4 border-none bg-black" 
         videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb" 
-        thumbnailSrc="https://i.imgur.com/fLEXkRO.png" 
+        thumbnailSrc="/home.webp" 
       />
     </div>
 
