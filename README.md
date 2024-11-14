@@ -1,3 +1,19 @@
+
+# preview
+![Preview](https://i.imgur.com/N55FOm3.png)
+## Testimonials
+![Preview](https://i.imgur.com/LE45R5O.png)
+## Crypto News APi
+![Preview](https://i.imgur.com/hFwuSSn.png)
+## Hero Section 
+![Preview](https://i.imgur.com/QiWgYZ3.png)
+## Features Section
+![Preview](https://i.imgur.com/e23XGHh.png)
+## Firebase Auth Login
+![Preview](https://i.imgur.com/VWylwRO.png)
+## Firebase Register
+![Preview](https://i.imgur.com/XOdbwEg.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
