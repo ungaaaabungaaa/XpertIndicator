@@ -41,7 +41,7 @@ export default function HeroSection() {
               className="h-10 w-[163px]  px-[16px] py-[10px] text-small font-medium leading-5 text-black bg-white"
               radius="full"
             >
-              Start Now
+              40X Start Now
             </Button>
             <Button
               className="h-10 w-[163px] border-1 border-white border-default-100 px-[16px] py-[10px] text-small font-medium leading-5 text-white"
