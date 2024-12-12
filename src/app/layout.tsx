@@ -7,8 +7,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Xpertindicator',
-  description: 'Empower your trades with precision insights, optimize performance, & make data-driven decisions confidently.',
+  title: 'Happymo',
+  description: 'Copy Trades, Leverage Our Powerful Indicator, & Trade with Confidence!',
 }
 
 export default function RootLayout({
