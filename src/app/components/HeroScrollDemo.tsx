@@ -10,9 +10,9 @@ export function HeroScrollDemo() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-white">
-              Unleash the power of <br />
+               40x Challenge<br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                XpertIndicator
+               1% Daily Profits
               </span>
             </h1>
           </>

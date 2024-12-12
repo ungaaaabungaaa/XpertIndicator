@@ -13,6 +13,7 @@ import Pricing_Tables from './components/pricing_tables';
 import { Test_Demo } from './components/test_demo';
 import { HeroScrollDemo } from './components/HeroScrollDemo';
 import HeroSection from './components/HeroSection'
+import { WorldMapDemo } from './components/world-map'
 
 
 export default function Home() {
@@ -114,11 +115,10 @@ export default function Home() {
       <Test_Demo></Test_Demo>
       
     </div>
-   
+  
      <CTA></CTA>
-     <FAQ></FAQ>
      <HeroScrollDemo></HeroScrollDemo>
-     <br></br>
+     <FAQ></FAQ>
      <br></br>
      <Footer></Footer>
    

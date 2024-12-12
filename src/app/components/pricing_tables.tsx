@@ -18,12 +18,12 @@ export default function Pricing_Tables() {
           <div className="lg:w-1/3 space-y-4 mb-8 lg:mb-0">
             <br></br>
             <br></br>
-            <Chip>Pricing Plan</Chip>
+            <Chip>Pick Your Poision</Chip>
             <br></br>
-            <h1 className="text-white text-2xl "> Choose the Perfect Plan <br />
+            <h1 className="text-white text-2xl "> Choose the Perfect Thing <br />
             for Your Trading Needs</h1>
             <p className="text-gray-400">
-              Explore our flexible pricing options & find the one that best suits your Trading needs.
+              Discover the power of our One-Click Copy Trading with the 40X Challenge, or elevate your trading strategy with our advanced AI Trading Indicator—designed to meet all your trading needs.
             </p>
           </div>
 
@@ -33,18 +33,18 @@ export default function Pricing_Tables() {
             <Card className="bg-pricing-card border-gray-800">
               <CardBody className="p-6 space-y-6">
                 <div>
-                  <h2 className="text-xl font-semibold mb-2  text-white">Free</h2>
+                  <h2 className="text-xl font-semibold mb-2  text-white">40x Challenge</h2>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl font-bold  text-white">14 Days</span>
+                    <span className="text-5xl font-bold  text-white">1% Daily</span>
                     <span className="text-gray-400">/Free</span>
                   </div>
                   <p className="text-gray-400 mt-3">
-                    Beginners looking to get started with Xpertindicator
+                   Grow your wealth effortlessly with the 40x Challenge — 1% monthly profit, no fees, just copy and trade!
                   </p>
                 </div>
 
                 <Button className="w-full bg-signup-button">
-                  Join Telegram | WhatsApp
+                  Start Now 40x
                 </Button>
 
                 <div className="space-y-4">
@@ -52,27 +52,23 @@ export default function Pricing_Tables() {
                   <ul className="space-y-3 text-white">
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Real-time 5 Trades Daily</span>
+                      <span>1% Profit Goal Daily</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Basic Signals for up to 12 Days</span>
+                      <span>No Fees or Commissions</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Price alerts for up to 5 cryptocurrencies</span>
+                      <span>Copy Professional Trader</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Access to Telegram & WhatsApp Groups</span>
+                      <span>Full Control Over Your Funds</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Basic Setup Guide</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Email support</span>
+                      <span>Transparent Performance Tracking</span>
                     </li>
                   </ul>
                 </div>
@@ -83,13 +79,13 @@ export default function Pricing_Tables() {
             <Card className="bg-pricing-card border-gray-800">
               <CardBody className="p-6 space-y-6">
                 <div>
-                  <h2 className="text-xl text-white font-semibold mb-2">LifeTime</h2>
+                  <h2 className="text-xl text-white font-semibold mb-2">AI Indicator</h2>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-5xl font-bold  text-white">₹2999</span>
+                    <span className="text-5xl font-bold  text-white">$29.00</span>
                     <span className="text-gray-400">/Only</span>
                   </div>
                   <p className="text-gray-400 mt-3">
-                    users & investors requiring Full Access to Xpertindicator
+                    Full Access With API Keys For Our AI INDICATOR
                   </p>
                 </div>
 
@@ -100,17 +96,13 @@ export default function Pricing_Tables() {
                 <div className="space-y-4">
                   <div className="text-sm text-gray-400 uppercase">What you will get</div>
                   <ul className="space-y-3 text-white">
-                    <li className="flex gap-3 ">
-                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>All features of the Free Plan</span>
-                    </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
                       <span>Professional-grade Signals Unlimited</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
-                      <span>Source Code For the Plugin</span>
+                      <span>API DOCS For the Plugin</span>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
@@ -123,6 +115,10 @@ export default function Pricing_Tables() {
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
                       <span>Dedicated account manager</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
+                      <span>Email Support</span>
                     </li>
                   </ul>
                 </div>

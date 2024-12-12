@@ -11,13 +11,13 @@ export default function Best_Tools() {
     <div className="min-h-screen text-white p-6 md:p-12">
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="space-y-4">
-         <Chip>Best Tools</Chip>
+         <Chip>AI Indicator</Chip>
           <div className="space-y-4">
             <h1 className="text-4xl md:text-2xl lg:text-4xl">
-              Everything you need in<br />one platform
+              Everything you need in<br />one Indicator
             </h1>
             <p className="text-lg text-white max-w-2xl">
-              We have built the best in class tools to manage the complete lifecycle of your crypto investments.
+              We have built the best in class tools to manage the complete lifecycle For Your Trading.
             </p>
           </div>
         </div>

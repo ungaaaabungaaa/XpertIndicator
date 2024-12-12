@@ -7,21 +7,21 @@ export default function footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold">XpertIndicator</h2>
+            <h2 className="text-2xl font-bold">HappyMo.Club</h2>
             <p className="text-gray-300 max-w-md">
-              Be part of a growing Wealth. Get insights, strategies, & stay updated with the latest Trades Signals.
+              Join the Path to Prosperity – 1% Growth a Day Keeps Poverty at Bay.
             </p>
           </div>
 
           {/* Free Trail */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Free Trail</h3>
+            <h3 className="text-xl font-semibold">Services</h3>
             <div className="space-y-2">
               <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                Telegram
+                40x Challenge
               </Link>
               <Link href="#" className="block text-gray-300 hover:text-white transition-colors">
-                WhatsApp
+                AI Indicator
               </Link>
             </div>
           </div>
@@ -33,13 +33,7 @@ export default function footer() {
               <p className="text-gray-300">
                 Email:{" "}
                 <Link href="mailto:support@xpertindicator.com" className="text-blue-400 hover:text-blue-300">
-                  support@xpertindicator.com
-                </Link>
-              </p>
-              <p className="text-gray-300">
-                Phone:{" "}
-                <Link href="tel:+11234567890" className="text-blue-400 hover:text-blue-300">
-                  +91 99454 05632
+                  support@happymo.club
                 </Link>
               </p>
             </div>
@@ -49,7 +43,7 @@ export default function footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm">
-            © 2024 XpertIndicator. All rights reserved.
+            © 2024 HappyMo.Club All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
