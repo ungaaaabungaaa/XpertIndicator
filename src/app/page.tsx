@@ -116,14 +116,11 @@ export default function Home() {
       <br></br>
       <Test_Demo></Test_Demo>
     </div>
-
      <HeroScrollDemo></HeroScrollDemo>
      <FAQ></FAQ>
      <br></br>
      <Footer></Footer>
-   
-   
-    
+
     </>
   )
 }
