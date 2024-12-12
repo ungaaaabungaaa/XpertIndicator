@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import { usePathname, useRouter } from 'next/navigation';
 import {
   Navbar,
   NavbarBrand,
@@ -27,14 +28,21 @@ export const AcmeLogo = () => {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
+  // Menu items with corresponding links
   const menuItems = [
-    "40x Challenge",
-    "AI Indicator",
-    "Reviews",
-    "Contact Us",
-    "About Us",
+    { name: "40x Challenge", path: "/" },
+    { name: "AI Indicator", path: "/features" },
+    { name: "News", path: "/news" },
+    { name: "Contact Us", path: "/contact" },
   ];
+
+  // Handle navigation on logo or brand name click
+  const navigateToHome = () => {
+    router.push('/');
+  };
 
   return (
     <Navbar className="bg-custom-navbar text-white" isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
@@ -43,37 +51,26 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden pr-3 cursor-pointer" justify="center">
-        <NavbarBrand>
+        <NavbarBrand onClick={navigateToHome} style={{ cursor: 'pointer' }}>
           <AcmeLogo />
-          <p className="font-bold text-purple-x  text-inherit text-2xl cursor-pointer">HappyMo</p>
+          <p className="font-bold text-purple-x text-inherit text-2xl">HappyMo</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 cursor-pointer" justify="center">
-        <NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4 cursor-pointer justify-center items-center flex-grow" justify="center">
+        <NavbarBrand onClick={navigateToHome} style={{ cursor: 'pointer' }}>
           <AcmeLogo />
-          <p className="font-bold text-purple-x  text-inherit">HappyMo</p>
+          <p className="font-bold text-purple-x text-inherit">HappyMo</p>
         </NavbarBrand>
-        <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer visible" href="">
-          40x Challenge
-          </Link>
-        </NavbarItem>
-        <NavbarItem >
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" aria-current="page" href="/features">
-          AI Indicator
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="/news">
-          News
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="/contact">
-          Contact Us 
-          </Link>
-        </NavbarItem>
+        <div className="flex justify-center items-center flex-grow gap-3">
+          {menuItems.map((item, index) => (
+            <NavbarItem key={index} isActive={pathname === item.path}>
+              <Link className={`text-grey hover:text-white hover:font-bold cursor-pointer ${pathname === item.path ? 'font-bold' : ''}`} href={item.path}>
+                {item.name}
+              </Link>
+            </NavbarItem>
+          ))}
+        </div>
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -91,13 +88,13 @@ export default function App() {
 
       <NavbarMenu className="bg-custom-navbar text-white">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
-              className="w-full bg-custom-navbar text-white"
-              href="#"
+              className={`w-full bg-custom-navbar text-white ${pathname === item.path ? 'font-bold' : ''}`}
+              href={item.path}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
