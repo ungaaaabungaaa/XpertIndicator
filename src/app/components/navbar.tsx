@@ -1,72 +1,104 @@
 'use client'
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
-import Link from "next/link";
-import { Button } from "@nextui-org/button";
-import React, { useEffect, useState } from "react";
-import Image from 'next/image';
-import Logo from "../../../public/navbar_icon.webp"
-import { auth } from '../config/firebaseConfig';
-import { onAuthStateChanged } from "firebase/auth"; // Import onAuthStateChanged
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
 
+export const AcmeLogo = () => {
+  return (
+    <svg fill="none" height="56" viewBox="0 0 32 32" width="56">
+      <path
+        clipRule="evenodd"
+        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+        fill="#5350F2"
+        fillRule="evenodd"
+      />
+    </svg>
+  );
+};
 
-export default function Nav_Bar() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  // Listen for authentication state changes
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsAuthenticated(!!user); // Set true if the user is logged in, false otherwise
-    });
-
-    // Clean up the listener when the component unmounts
-    return () => unsubscribe();
-  }, []);
+  const menuItems = [
+    "40x Challenge",
+    "Indicator",
+    "About Us",
+    "Contact Us",
+  ];
 
   return (
-    <Navbar className="bg-custom-navbar">
-      <NavbarBrand>
-        <Image className="mr-8" src={Logo} alt="XpertIndicator Logo" width={28} height={28} />
-        <p className="font-bold text-white">XpertIndicator</p>
-      </NavbarBrand>
-      <NavbarContent className="hidden md:flex md:gap-4" justify="center">
+    <Navbar className="bg-custom-navbar" onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <AcmeLogo />
+          <p className="text-inherit font-bold text-2xl text-purple-x  cursor-pointer">HappyMo</p>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link className="text-grey hover:text-white" href="/">
-            Home
+          <Link color="foreground" className="text-grey hover:text-white hover:font-bold" href="">
+            40X Challenge
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey hover:text-white" href="/features" aria-current="page">
-            Features
+          <Link aria-current="page"  className="text-grey hover:text-white hover:font-bold" href="#">
+            Indicator
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey hover:text-white" href="/news">
-            News
+          <Link color="foreground"  className="text-grey hover:text-white hover:font-bold" href="#">
+            About Us
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey hover:text-white" href="/contact">
-            Contact
+          <Link color="foreground"  className="text-grey hover:text-white hover:font-bold" href="#">
+            Contact Us
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        {/* Show buttons only if the user is not authenticated */}
-        {!isAuthenticated && (
-          <>
-            <NavbarItem className="hidden md:flex">
-              <Button as={Link} className="bg-login-button" href="/auth/login" variant="flat">
-                login
-              </Button>
-            </NavbarItem>
-            <NavbarItem>
-              <Button as={Link} className="bg-signup-button" href="/auth/register" variant="flat">
-                Getting Started
-              </Button>
-            </NavbarItem>
-          </>
-        )}
+        <NavbarItem className="lg:flex">
+         <Button as={Link} className="bg-login-button " href="#" variant="flat">
+            AI Indicator
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+        <Button as={Link} className="bg-signup-button" href="#" variant="flat">
+            40x Start Now
+          </Button>
+        </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color={
+                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+              }
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
+
