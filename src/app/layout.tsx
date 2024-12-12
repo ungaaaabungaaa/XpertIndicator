@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Head from 'next/head';
 import { Toaster } from "react-hot-toast";
+import { NextUIProvider } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,8 +28,10 @@ export default function RootLayout({
         <link rel="manifest" href="./site.webmanifest" />
       </Head>
       <body className={`relative ${inter.className}`}>
-        <Toaster position="bottom-center" />
-        {children}
+        <NextUIProvider>
+          <Toaster position="bottom-center" />
+          {children}
+        </NextUIProvider>
       </body>
     </html>
   )
