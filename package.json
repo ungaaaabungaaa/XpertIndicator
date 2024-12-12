@@ -23,7 +23,7 @@
     "@nextui-org/theme": "^2.2.11",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-separator": "^1.1.0",
-    "@tabler/icons-react": "^3.22.0",
+    "@tabler/icons-react": "^3.24.0",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

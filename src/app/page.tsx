@@ -14,6 +14,7 @@ import { Test_Demo } from './components/test_demo';
 import { HeroScrollDemo } from './components/HeroScrollDemo';
 import HeroSection from './components/HeroSection'
 import { WorldMapDemo } from './components/world-map'
+import { AppleCardsCarouselDemo } from './components/apple-cards-carousel'
 
 
 export default function Home() {
@@ -102,7 +103,7 @@ export default function Home() {
     <br></br>
     <Pricing_Tables></Pricing_Tables>
     <br></br>
-    
+    <CTA></CTA>
 
     <div className="w-full p-6 flex justify-center items-center flex-col">
       <br></br>
@@ -116,7 +117,6 @@ export default function Home() {
       
     </div>
   
-     <CTA></CTA>
      <HeroScrollDemo></HeroScrollDemo>
      <FAQ></FAQ>
      <br></br>
