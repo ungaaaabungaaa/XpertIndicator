@@ -12,14 +12,16 @@ import Best_Tools from './components/best_tools';
 import Pricing_Tables from './components/pricing_tables';
 import { Test_Demo } from './components/test_demo';
 import { HeroScrollDemo } from './components/HeroScrollDemo';
+import HeroSection from './components/HeroSection'
 
 
 export default function Home() {
   return (
     <>
     <Nav_Bar></Nav_Bar>
+    <HeroSection></HeroSection>
 
-    <div className="w-full p-6 flex justify-center items-center flex-col bg-contact-hero-home text-center">
+    {/* <div className="w-full p-6 flex justify-center items-center flex-col bg-contact-hero-home text-center">
       <br></br>
       <br></br>
       <Chip>New: Our AI Plugin just landed</Chip>
@@ -34,7 +36,7 @@ export default function Home() {
         videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb" 
         thumbnailSrc="/home.webp" 
       />
-    </div>
+    </div> */}
 
     <div className="w-full p-6 flex justify-center items-center flex-col text-center">
       <br></br>
