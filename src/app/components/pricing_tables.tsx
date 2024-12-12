@@ -70,6 +70,19 @@ export default function Pricing_Tables() {
                       <Check className="h-5 w-5 text-teal-500 shrink-0" />
                       <span>Transparent Performance Tracking</span>
                     </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
+                      <span>No Hidden Charges</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
+                      <span>Instant Updates</span>
+                    </li>
+
+                    <li className="flex gap-3">
+                      <Check className="h-5 w-5 text-teal-500 shrink-0" />
+                      <span>Customizable Trading Preferences</span>
+                    </li>
                   </ul>
                 </div>
               </CardBody>
@@ -85,7 +98,7 @@ export default function Pricing_Tables() {
                     <span className="text-gray-400">/Only</span>
                   </div>
                   <p className="text-gray-400 mt-3">
-                    Full Access With API Keys For Our AI INDICATOR
+                    Full Access With API Keys
                   </p>
                 </div>
 

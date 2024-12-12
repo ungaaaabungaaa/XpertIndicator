@@ -18,17 +18,17 @@ const FAQPage = () => {
    
 
 
-  const faqItems = [
-    { question: "How do I place an order?", answer: "To place an order, simply add items to your cart and proceed to checkout." },
-    { question: "What payment methods do you accept?", answer: "We accept credit cards, PayPal, and bank transfers." },
-    { question: "How long does shipping take?", answer: "Shipping typically takes 3-5 business days within the country." },
-    { question: "Can I return an item?", answer: "Yes, you can return items within 30 days of purchase." },
-    { question: "Do you offer international shipping?", answer: "Yes, we ship to most countries worldwide." },
-    { question: "How can I track my order?", answer: "You'll receive a tracking number via email once your order ships." },
-    { question: "Are your products guaranteed?", answer: "Yes, all our products come with a 1-year warranty." },
-    { question: "Do you have a physical store?", answer: "We are an online-only store at the moment." },
-    { question: "How do I contact customer support?", answer: "You can reach us via email or phone listed on our Contact page." },
-    { question: "Do you offer gift wrapping?", answer: "Yes, gift wrapping is available for a small additional fee." },
+   const faqItems = [
+    { question: "What is the 40x Challenge?", answer: "The 40x Challenge is a copy trading plan where you aim for 1% profit every month, with no fees or commissions." },
+    { question: "How do I join the 40x Challenge?", answer: "Simply deposit funds into your account, and start copy trading with our expert traders." },
+    { question: "Are there any fees involved?", answer: "No, there are no fees or commissions. You only pay for your initial deposit." },
+    { question: "Can I track my performance?", answer: "Yes, you can monitor your profits and trades in real time through your account dashboard." },
+    { question: "Do I need any prior trading experience?", answer: "No prior experience is needed. Just deposit funds and let our system handle the trading." },
+    { question: "How can I withdraw my profits?", answer: "You can withdraw your profits anytime by requesting a transfer to your account." },
+    { question: "What kind of support do you offer?", answer: "We offer email support and access to dedicated Telegram and WhatsApp groups for assistance." },
+    { question: "Is my money safe?", answer: "Yes, your funds remain in your account, and you have full control over them at all times." },
+    { question: "How often will I receive trading updates?", answer: "You will receive real-time updates for 5 trades daily, along with price alerts for selected cryptocurrencies." },
+    { question: "Can I cancel my participation?", answer: "Yes, you can stop copy trading and withdraw your funds at any time." }
   ];
 
   return (
