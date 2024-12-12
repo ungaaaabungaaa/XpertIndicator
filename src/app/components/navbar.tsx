@@ -55,27 +55,22 @@ export default function App() {
           <p className="font-bold text-purple-x  text-inherit">HappyMo</p>
         </NavbarBrand>
         <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer visible" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer visible" href="">
           40x Challenge
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" aria-current="page" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" aria-current="page" href="/features">
           AI Indicator
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
-          Reviews
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="/news">
+          News
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
-          About Us 
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="/contact">
           Contact Us 
           </Link>
         </NavbarItem>
@@ -83,7 +78,7 @@ export default function App() {
 
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex lg:block">
-          <Button as={Link} color="warning" href="#" className="bg-login-button" variant="flat">
+          <Button as={Link} color="warning" href="/checkout" className="bg-login-button" variant="flat">
             AI Indicator
           </Button>
         </NavbarItem>

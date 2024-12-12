@@ -13,9 +13,6 @@ import Pricing_Tables from './components/pricing_tables';
 import { Test_Demo } from './components/test_demo';
 import { HeroScrollDemo } from './components/HeroScrollDemo';
 import HeroSection from './components/HeroSection'
-import { WorldMapDemo } from './components/world-map'
-import { AppleCardsCarouselDemo } from './components/apple-cards-carousel'
-import { GlobeDemo } from './components/globe'
 
 
 export default function Home() {
