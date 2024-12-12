@@ -15,6 +15,7 @@ import { HeroScrollDemo } from './components/HeroScrollDemo';
 import HeroSection from './components/HeroSection'
 import { WorldMapDemo } from './components/world-map'
 import { AppleCardsCarouselDemo } from './components/apple-cards-carousel'
+import { GlobeDemo } from './components/globe'
 
 
 export default function Home() {
@@ -114,9 +115,8 @@ export default function Home() {
       <p className='text-white'>Checkout Our Reviews On Google Too & Some Here As Well</p>
       <br></br>
       <Test_Demo></Test_Demo>
-      
     </div>
-  
+
      <HeroScrollDemo></HeroScrollDemo>
      <FAQ></FAQ>
      <br></br>

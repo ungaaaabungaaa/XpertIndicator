@@ -23,6 +23,8 @@
     "@nextui-org/theme": "^2.2.11",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-separator": "^1.1.0",
+    "@react-three/drei": "^9.120.4",
+    "@react-three/fiber": "^8.17.10",
     "@tabler/icons-react": "^3.24.0",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
@@ -42,7 +44,9 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.3.0",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.171.0",
+    "three-globe": "^2.35.7"
   },
   "devDependencies": {
     "@types/node": "^20",
