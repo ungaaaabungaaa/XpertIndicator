@@ -42,40 +42,40 @@ export default function App() {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden pr-3 cursor-pointer" justify="center">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-purple-x  text-inherit text-2xl">HappyMo</p>
+          <p className="font-bold text-purple-x  text-inherit text-2xl cursor-pointer">HappyMo</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 cursor-pointer" justify="center">
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-purple-x  text-inherit">HappyMo</p>
         </NavbarBrand>
         <NavbarItem>
-          <Link className="text-grey visible" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer visible" href="#">
           40x Challenge
           </Link>
         </NavbarItem>
         <NavbarItem >
-          <Link className="text-grey" aria-current="page" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" aria-current="page" href="#">
           AI Indicator
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey" color="foreground" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
           Reviews
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey" color="foreground" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
           About Us 
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-grey" color="foreground" href="#">
+          <Link className="text-grey hover:text-white hover:font-bold cursor-pointer" color="foreground" href="#">
           Contact Us 
           </Link>
         </NavbarItem>
