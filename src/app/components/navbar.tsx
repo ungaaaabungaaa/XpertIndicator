@@ -35,8 +35,6 @@ export default function App() {
   const menuItems = [
     { name: "40x Challenge", path: "/" },
     { name: "AI Indicator", path: "/features" },
-    { name: "News", path: "/news" },
-    { name: "Contact Us", path: "/contact" },
   ];
 
   // Handle navigation on logo or brand name click
@@ -64,7 +62,7 @@ export default function App() {
         </NavbarBrand>
         <div className="flex justify-center items-center flex-grow gap-3">
           {menuItems.map((item, index) => (
-            <NavbarItem key={index} isActive={pathname === item.path}>
+            <NavbarItem key={index}>
               <Link className={`text-grey hover:text-white hover:font-bold cursor-pointer ${pathname === item.path ? 'font-bold' : ''}`} href={item.path}>
                 {item.name}
               </Link>
