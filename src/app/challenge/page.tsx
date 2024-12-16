@@ -5,6 +5,7 @@ import { Chip } from '@nextui-org/chip';
 import CTA from '../components/cta';
 import FAQPage from '../components/faq';
 import { TableDemo } from '../components/dashboard';
+import { Charts } from '../components/charts';
 
 export default function Challenge() {
   return (
@@ -26,6 +27,8 @@ export default function Challenge() {
           </p>
           <br></br>
           <TableDemo></TableDemo>
+          <br></br>
+          <Charts></Charts>
       </div>
      
 
