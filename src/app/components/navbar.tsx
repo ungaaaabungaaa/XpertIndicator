@@ -74,7 +74,7 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex lg:block">
+        <NavbarItem className="hidden">
           <Button as={Link} color="warning" href="/checkout" className="bg-login-button" variant="flat">
             AI Indicator
           </Button>
