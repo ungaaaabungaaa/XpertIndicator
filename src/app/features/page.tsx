@@ -8,6 +8,7 @@ import feature2 from '../../../public/feature2.webp'
 import feature3 from '../../../public/feature3.webp'
 import feature4 from '../../../public/feature4.webp'
 import feature5 from '../../../public/feature6.webp'
+import { TypewriterEffectSmoothDemo } from '../components/typewriter-effect';
 
 export default function Features() {
   return (
@@ -18,6 +19,11 @@ export default function Features() {
       <Nav_Bar></Nav_Bar>
       <br></br>
        <div className="w-100 p-6 flex items-center justify-center flex-col">
+          
+          
+          <TypewriterEffectSmoothDemo></TypewriterEffectSmoothDemo>
+          
+          
           <br></br>
           <Chip>Best Features</Chip>
           <br></br>
