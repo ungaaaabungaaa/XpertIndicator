@@ -78,7 +78,7 @@ export default function App() {
           </Button>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="warning" className="bg-signup-button" href="#" variant="flat">
+          <Button as={Link} color="warning" className="bg-signup-button" href="https://i.bybit.com/269r1abS?action=inviteToCopy" variant="flat">
             40x Start Now
           </Button>
         </NavbarItem>

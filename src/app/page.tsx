@@ -92,16 +92,17 @@ export default function Home() {
 
         </div>
       </div>
+      <HeroScrollDemo></HeroScrollDemo>
     </div>
 
     <br></br>
-    <Best_Tools></Best_Tools>
+   
+    
    
    
+    {/* <br></br>
+    <Pricing_Tables></Pricing_Tables> */}
     <br></br>
-    <Pricing_Tables></Pricing_Tables>
-    <br></br>
-    <CTA></CTA>
 
     <div className="w-full p-6 flex justify-center items-center flex-col">
       <br></br>
@@ -113,7 +114,10 @@ export default function Home() {
       <br></br>
       <Test_Demo></Test_Demo>
     </div>
-     <HeroScrollDemo></HeroScrollDemo>
+    
+    <CTA></CTA>
+
+
      <FAQ></FAQ>
      <br></br>
      <Footer></Footer>

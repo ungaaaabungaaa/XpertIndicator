@@ -6,7 +6,7 @@ import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 
 export default function HeroSection() {
   return (
-    <div className="relative flex h-dvh w-full flex-col overflow-hidden bg-contact-hero-home">
+    <div className="relative flex  w-full flex-col overflow-hidden bg-contact-hero-home">
       <main className="container mx-auto flex flex-1 flex-col items-center justify-center overflow-hidden px-8">
         
         <br className="hidden lg:block"></br>
@@ -38,6 +38,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
             <Button
+              href="https://i.bybit.com/269r1abS?action=inviteToCopy"
               className="h-10 w-[163px]  px-[16px] py-[10px] text-small font-medium leading-5 text-black bg-white"
               radius="full"
             >
@@ -57,7 +58,7 @@ export default function HeroSection() {
               radius="full"
               variant="bordered"
             >
-              AI Indicator
+              View Goals
             </Button>
           </div>
         </section>
