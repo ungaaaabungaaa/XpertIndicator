@@ -16,10 +16,10 @@ export default function CTA() {
             <Chip>Get Started</Chip>
             <br />
             <h1 className="text-white text-2xl text-center">Maximize Your Trading Potential</h1>
-            <p className="text-white text-center">Get instant access to our powerful Trading Indicator. Track your signals, analyze <br></br> Trade trends, & make informed decisions— all in one Indicator.</p>
+            <p className="text-white text-center">Join instant to our Copy Trading Platform. Track your Profits Daily, Win Daily <br></br> & make informed decisions— 40x Challenge.</p>
             <br></br>
             <br></br>
-            <Button size="md" radius="md"  onClick={() => router.push('/checkout')} variant="faded" className='cta-button pt-2 pb-2'>Get Started</Button>
+            <Button size="md" radius="md"  href="https://i.bybit.com/269r1abS?action=inviteToCopy" variant="faded" className='cta-button pt-2 pb-2'>Get Started</Button>
             <br></br>
             <br></br>
       </div>

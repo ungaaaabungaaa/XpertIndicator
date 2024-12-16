@@ -33,7 +33,7 @@ export default function App() {
 
   // Menu items with corresponding links
   const menuItems = [
-    { name: "40x Challenge", path: "/" },
+    { name: "40x Challenge", path: "/challenge" },
     { name: "AI Indicator", path: "/features" },
   ];
 
