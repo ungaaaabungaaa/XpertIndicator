@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import { Chip } from '@nextui-org/chip';
 import CTA from '../components/cta';
 import FAQPage from '../components/faq';
+import { TableDemo } from '../components/dashboard';
 
 export default function Challenge() {
   return (
@@ -23,8 +24,11 @@ export default function Challenge() {
           <p className="text-white text-center">
           Helps users make informed decisions based on the most up-to-date information, minimizing the risk of trading errors.
           </p>
-          <br></br>  
-        </div>
+          <br></br>
+          <TableDemo></TableDemo>
+      </div>
+     
+
       <CTA></CTA>
       <FAQPage></FAQPage>
       <br></br>
