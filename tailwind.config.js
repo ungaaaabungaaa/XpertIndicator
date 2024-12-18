@@ -124,6 +124,6 @@ module.exports = {
   		xl: '1280px'
   	}
   },
-  plugins: [nextui(), require("tailwindcss-animate")],
+  plugins: [nextui(), tailwindcssAnimate],
 }
 
